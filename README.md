@@ -5,3 +5,6 @@ ADDED copyrite
 
 ### How To Contribute
 Please fork this repo. it doesn't really do much
+
+### Thanks
+Thanks to everyone who supported me
