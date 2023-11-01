@@ -7,4 +7,4 @@ ADDED copyrite
 Please fork this repo. it doesn't really do much
 
 ### Thanks
-Thanks to everyone who supported me
+Thanks to everyone who supported me, Now i'm adding more changes muahahahaha
