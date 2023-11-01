@@ -21,4 +21,13 @@ app.post("/user", (res,req) =>{
     res.send(`Creating a Post Request ${user}`)
 })
 
+app.get("/user/:userid/book/:bookid", (req,res) =>{
+    const id = req.params("userid")
+    const bid = req.params("bookid");
+    res.json = {
+        userID: id,
+        bookID: bid
+    }
+})
+
 app.listen("listening on port", 4000);
