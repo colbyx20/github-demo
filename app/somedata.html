@@ -17,18 +17,27 @@
 
     <script>
 
-        let listOfData = []
+        const axis = require("axios");
 
-        const myData = await axios.post((res) => {
-            //something here
-        });
+        let listOfData = [];
 
-        const updateList = await await.axios.get((res) =>{
-            ListOfData = [res,...listOfData]
-        });
+        const myData = await axios.post("/user/create")
+            .then((res) => {
+                document.getElementById("data").innerHTML = res.myData;
+            })
+            .catch((err) =>{
+                console.err(`${error} has occured`)
+            })
 
-        document.getElementById("data").innerHTML = myData;
-        document.getElementById("row").innherHTML[0] = listOfData;
+        const updateList = await await.axios.get("/user/:id", {params: {ID:1}})
+            .then((res) =>{
+                listOfData = [res,...listOfData]
+                document.getElementById("row").innherHTML[0] = listOfData;
+            })
+            .catch((error) =>{
+                console.err(error);
+            })
+
 
 
     </script>
