@@ -9,13 +9,28 @@
     
     <div class="data"></div>
 
+    <table>
+        <tr>
+            <td class="row"></td>
+        </tr>
+    </table>
 
     <script>
+
+        let listOfData = []
+
         const myData = await axios.post((res) => {
             //something here
         });
 
+        const updateList = await await.axios.get((res) =>{
+            ListOfData = [res,...listOfData]
+        });
+
         document.getElementById("data").innerHTML = myData;
+        document.getElementById("row").innherHTML[0] = listOfData;
+
+
     </script>
 </body>
 </html>
