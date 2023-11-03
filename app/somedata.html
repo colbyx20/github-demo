@@ -36,7 +36,7 @@
             params: {ID:1}
         })
         .then((res) =>{
-            listOfData = [res,...listOfData]
+            listOfData = [res.myData.data,...listOfData]
             document.getElementById("row").innherHTML[0] = listOfData;
         })
         .catch((error) =>{
