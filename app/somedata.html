@@ -21,22 +21,27 @@
 
         let listOfData = [];
 
-        const myData = await axios.post("/user/create")
-            .then((res) => {
-                document.getElementById("data").innerHTML = res.myData;
-            })
-            .catch((err) =>{
-                console.err(`${error} has occured`)
-            })
+        const myData = await axios.post("/user/create", {
+            firstName: "colby",
+            lastName: "berger"
+        })
+        .then((res) => {
+            document.getElementById("data").innerHTML = res.myData;
+        })
+        .catch((err) =>{
+            console.err(`${error} has occured`)
+        })
 
-        const updateList = await await.axios.get("/user/:id", {params: {ID:1}})
-            .then((res) =>{
-                listOfData = [res,...listOfData]
-                document.getElementById("row").innherHTML[0] = listOfData;
-            })
-            .catch((error) =>{
-                console.err(error);
-            })
+        const updateList = await await.axios.get("/user/:id", {
+            params: {ID:1}
+        })
+        .then((res) =>{
+            listOfData = [res,...listOfData]
+            document.getElementById("row").innherHTML[0] = listOfData;
+        })
+        .catch((error) =>{
+            console.err(error);
+        })
 
 
 
