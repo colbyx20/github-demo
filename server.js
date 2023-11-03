@@ -30,4 +30,10 @@ app.get("/user/:userid/book/:bookid", (req,res) =>{
     }
 })
 
+function dosomething(){
+    console.log("doing something");
+}
+
+dosomething();
+
 app.listen("listening on port", 4000);
